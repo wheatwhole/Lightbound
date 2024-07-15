@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3 uid="uid://w173w73pjist"]
+
+[ext_resource type="Theme" uid="uid://dyec0xj46o1ba" path="res://title.tres" id="1_nk4et"]
+[ext_resource type="Script" path="res://scenes/game_objects/level_ui.gd" id="1_smvu4"]
+[ext_resource type="Texture2D" uid="uid://dvbxiws1bcun2" path="res://assets/game_elements/Misc01.png" id="3_1j1oc"]
+[ext_resource type="Theme" uid="uid://dgejqlbl76nlk" path="res://levelui.tres" id="3_ykx5y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y85ov"]
+
+[node name="level_ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="points" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 284.0
+offset_bottom = 96.0
+script = ExtResource("1_smvu4")
+
+[node name="Label" type="Label" parent="points"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.0
+offset_top = -25.5
+offset_right = 116.0
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_nk4et")
+theme_override_font_sizes/font_size = 48
+text = "points - 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hearts" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 152.0
+offset_bottom = 152.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_y85ov")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="hearts"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.5
+offset_top = -16.0
+offset_right = 65.5
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="hearts/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_ykx5y")
+
+[node name="TextureRect" type="TextureRect" parent="hearts/HBoxContainer/MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("3_1j1oc")
+expand_mode = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="hearts/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_ykx5y")
+
+[node name="TextureRect3" type="TextureRect" parent="hearts/HBoxContainer/MarginContainer2"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("3_1j1oc")
+expand_mode = 3
+
+[node name="MarginContainer3" type="MarginContainer" parent="hearts/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_ykx5y")
+
+[node name="TextureRect2" type="TextureRect" parent="hearts/HBoxContainer/MarginContainer3"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("3_1j1oc")
+expand_mode = 3

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxvgabb88814w"]
+
+[ext_resource type="Texture2D" uid="uid://dbfls7ypy2dhr" path="res://assets/game_elements/Checkpoints/End/End (Idle).png" id="1_qsh73"]
+[ext_resource type="Script" path="res://scenes/game_objects/trophy.gd" id="1_tdffu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcljy"]
+size = Vector2(128, 132)
+
+[node name="trophy" type="Area2D"]
+script = ExtResource("1_tdffu")
+next_level = "2"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_qsh73")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.90735e-06, 30.0001)
+shape = SubResource("RectangleShape2D_bcljy")
