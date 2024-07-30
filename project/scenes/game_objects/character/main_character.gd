@@ -2,14 +2,14 @@ extends CharacterBody2D
 
 
 var jumping = 0
-const SPEED = 500.0
-const JUMP_VELOCITY = -1050.0
-const ACCELERATION = 20
-const FRICTION = 5000
+const SPEED = 166
+const JUMP_VELOCITY = -350.0
+const ACCELERATION = 6.66
+const FRICTION = 1666
 var prevVelocity = Vector2.ZERO
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-@export var gravity_multiplier: float = -0.00002941176*JUMP_VELOCITY
+@export var gravity_multiplier: float = -0.00000980392*JUMP_VELOCITY
 @onready var sprite_2d = $Sprite2D
 @onready var coyote_timer = $CoyoteTimer
 @onready var animation_player = $AnimationPlayer
@@ -37,10 +37,10 @@ func _physics_process(delta):
 	if not is_on_floor():
 		# velocity.x=lerp(prevVelocity.x, velocity.x, 0)
 		velocity.y += gravity*gravity_multiplier
-		if abs(velocity.y) < 50:
+		if abs(velocity.y) < 1:
 			gravity *=0.95
 		else:
-			gravity = 1700
+			gravity = 4900
 		
 	if  Input.is_action_just_pressed("jump") and is_on_floor () or Input.is_action_just_pressed("jump") and coyote_timer.time_left> 0.0:
 		velocity.y = JUMP_VELOCITY
@@ -51,11 +51,11 @@ func _physics_process(delta):
 	if !player == null and Input.is_action_just_released("jump"):
 		if $RightOuter.is_colliding() and !$RightInner.is_colliding() \
 			and !$LeftInner.is_colliding() and !$LeftOuter.is_colliding():
-				player.global_position.x += 12
+				player.global_position.x += 4
 				
 		elif $LeftOuter.is_colliding() and !$RightInner.is_colliding() \
 			and !$LeftInner.is_colliding() and !$RightOuter.is_colliding():
-				player.global_position.x -= 12
+				player.global_position.x -= 4
 
 	var direction = Input.get_axis("left", "right")
 	if direction:

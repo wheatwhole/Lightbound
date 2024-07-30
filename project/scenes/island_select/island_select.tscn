@@ -1,10 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://duk6xqmcinbi7"]
+[gd_scene load_steps=6 format=3 uid="uid://duk6xqmcinbi7"]
 
 [ext_resource type="Script" path="res://scenes/island_select/island_select.gd" id="1_x2ksv"]
+[ext_resource type="PackedScene" uid="uid://dip3ohgw5r4gr" path="res://scenes/back.tscn" id="5_vwpgq"]
 [ext_resource type="PackedScene" uid="uid://dqt4r2upcl5xa" path="res://scenes/game_objects/plricon.tscn" id="22_eh2vo"]
 [ext_resource type="PackedScene" uid="uid://4iyll8cohv4j" path="res://scenes/island_select/island_icon.tscn" id="23_f64jf"]
 
-[sub_resource type="PackedScene" id="PackedScene_pyapu"]
+[sub_resource type="PackedScene" id="PackedScene_u6smf"]
 
 [node name="Island Select" type="Control"]
 layout_mode = 3
@@ -15,16 +16,24 @@ script = ExtResource("1_x2ksv")
 
 [node name="Scene Objects" type="Node" parent="."]
 
-[node name="Cloud Forest" parent="Scene Objects" instance=ExtResource("23_f64jf")]
+[node name="Cloud Forest" parent="Scene Objects" node_paths=PackedStringArray("next_island_right") instance=ExtResource("23_f64jf")]
 scale = Vector2(0.974284, 1)
 island_index = 0
+next_island_right = NodePath("../Shattered Savanna")
 
-[node name="Shattered Savanna" parent="Scene Objects" instance=ExtResource("23_f64jf")]
+[node name="Shattered Savanna" parent="Scene Objects" node_paths=PackedStringArray("next_island_left") instance=ExtResource("23_f64jf")]
 offset_left = 392.0
 offset_top = 192.0
 offset_right = 456.0
 offset_bottom = 256.0
-level_select_packed = SubResource("PackedScene_pyapu")
+next_island_left = NodePath("../Cloud Forest")
+level_select_packed = SubResource("PackedScene_u6smf")
 
 [node name="plricon" parent="Scene Objects" instance=ExtResource("22_eh2vo")]
-position = Vector2(424, 224)
+position = Vector2(424, 223)
+scale = Vector2(1, 1.016)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Back" parent="UI" instance=ExtResource("5_vwpgq")]
+previous_scene = "res://scenes/main_menu/main_menu.tscn"

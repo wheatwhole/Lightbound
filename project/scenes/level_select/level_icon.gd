@@ -2,7 +2,8 @@
 extends Node
 class_name LevelIcon
 
-@export var level_name := "1"
+@export var worldwide_level_index := "1"
+@export var level_name: String
 @export_file("*.tscn") var next_scene_path: String
 @export var next_level_up: LevelIcon
 @export var next_level_down: LevelIcon

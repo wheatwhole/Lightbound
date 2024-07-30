@@ -1,24 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://4iyll8cohv4j"]
 
 [ext_resource type="Script" path="res://scenes/island_select/island_icon.gd" id="1_a8lei"]
-[ext_resource type="Theme" uid="uid://bj3pfejogia13" path="res://world_select.tres" id="2_cx5r3"]
-[ext_resource type="PackedScene" uid="uid://bny7irux0vi3" path="res://scenes/level_select/level_select.tscn" id="2_u5r38"]
+[ext_resource type="PackedScene" uid="uid://bny7irux0vi3" path="res://scenes/level_select/cloud_forest/level_select.tscn" id="2_koenb"]
+[ext_resource type="Theme" uid="uid://brrqirrrbvlpd" path="res://themes/awardwinningui.tres" id="3_yvd4f"]
 
 [node name="IslandIcon" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 64.0
-offset_bottom = 64.0
+offset_right = 32.0
+offset_bottom = 32.0
 pivot_offset = Vector2(32, 32)
 script = ExtResource("1_a8lei")
 island_index = 1
-level_select_packed = ExtResource("2_u5r38")
+level_select_packed = ExtResource("2_koenb")
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
 layout_mode = 0
 offset_top = -32.0
 offset_right = 86.0
-theme = ExtResource("2_cx5r3")
+theme = ExtResource("3_yvd4f")
+theme_type_variation = &"ShadedText"
+theme_override_font_sizes/font_size = 32
 text = "Cloud Forest "
 vertical_alignment = 1

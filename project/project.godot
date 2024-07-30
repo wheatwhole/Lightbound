@@ -20,6 +20,8 @@ Global="*res://global.gd"
 
 [display]
 
+window/size/viewport_width=640
+window/size/viewport_height=360
 window/size/window_width_override=1152
 window/size/window_height_override=648
 window/stretch/mode="canvas_items"
@@ -123,5 +125,6 @@ cancel={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 textures/default_filters/use_nearest_mipmap_filter=true
 environment/defaults/default_clear_color=Color(0.129412, 0.164706, 0.243137, 1)

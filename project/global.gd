@@ -5,23 +5,29 @@ var levels:  Array
 var levels_available: Dictionary
 
 var islands: Array
-
 var islands_formatted: Array
 var current_island: String
 
 func _ready():
 	levels = [1,2]
-
+	
+	islands = ["cloud_forest","shattered_savanna"]
+	islands_formatted = ["Cloud Forest", "Shattered Savanna"]
+	
 	levels_available = {
-		"1" : true, 
+		"1" : true,
 		"2" : false,
 		"3" : false
 	}
 	
-	islands = ["cloud_forest","shattered_savanna"]
-	islands_formatted = ["Cloud Forest", "Shattered Savanna"]
 func unlock_level(lvlname):
-	Global.levels_available[lvlname] = true
+	var level = levels_available[str(lvlname)]
+	level = true
+	return level
+	
+func level_status(lvlname):
+	var level_status = levels_available[lvlname]
+	return level_status
 
 func clone(path, pos):
 	var new_scene = load(path)

@@ -8,11 +8,9 @@ size = Vector2(128, 132)
 
 [node name="trophy" type="Area2D"]
 script = ExtResource("1_tdffu")
-next_level = "2"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(3, 3)
 texture = ExtResource("1_qsh73")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

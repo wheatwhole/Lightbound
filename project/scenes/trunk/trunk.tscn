@@ -137,17 +137,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_108pd"]
-size = Vector2(80, 96)
+size = Vector2(28, 29)
 
 [node name="Trunk" type="RigidBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(3.1875, 3.1875)
 sprite_frames = SubResource("SpriteFrames_yvcaw")
 autoplay = "default"
 frame_progress = 0.0331652
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8)
+position = Vector2(-1, 2.5)
 shape = SubResource("RectangleShape2D_108pd")

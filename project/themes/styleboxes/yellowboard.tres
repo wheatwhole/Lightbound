@@ -1,0 +1,13 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cbnul3wtp7etb"]
+
+[ext_resource type="Texture2D" uid="uid://dryxiuf818bx" path="res://assets/ui/Panels/YellowBoard.png" id="1_a2unq"]
+
+[resource]
+texture = ExtResource("1_a2unq")
+texture_margin_left = 29.0
+texture_margin_top = 29.0
+texture_margin_right = 29.0
+texture_margin_bottom = 27.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 2
+region_rect = Rect2(5, 5, 86, 86)

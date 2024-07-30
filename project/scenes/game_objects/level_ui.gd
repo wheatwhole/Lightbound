@@ -1,11 +1,13 @@
-extends Panel
-class_name Points
+extends Control
 
-@onready var label = $Label
-@export var points: int = 0
+@onready var node: Node
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	label.text = str("points - ", points)
-func _process(_delta):
-	if Engine.is_editor_hint():
-			label.text = str("points - ", points)
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass

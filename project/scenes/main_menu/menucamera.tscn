@@ -9,7 +9,7 @@ scale = Vector2(1.00527, 1)
 
 [node name="Camera2D" type="Camera2D" parent="CollisionShape2D"]
 position = Vector2(6.10352e-05, 0.000183105)
-scale = Vector2(150, 26.19)
+scale = Vector2(1e-05, 1e-05)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 script = ExtResource("1_t6n32")

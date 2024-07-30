@@ -322,8 +322,6 @@ _data = {
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 texture_filter = 1
-position = Vector2(1, -24)
-scale = Vector2(3, 3)
 script = ExtResource("1_reheq")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
@@ -344,19 +342,19 @@ one_shot = true
 position = Vector2(-6, 1)
 rotation = 3.14159
 scale = Vector2(4, 1)
-target_position = Vector2(-0.28409, 28.3333)
+target_position = Vector2(0.166649, 28.3333)
 
 [node name="RightInner" type="RayCast2D" parent="."]
 position = Vector2(-0.666667, 0.333334)
 rotation = 3.14159
 scale = Vector2(2.34667, 1)
-target_position = Vector2(-0.28409, 28.3333)
+target_position = Vector2(0.142015, 28.3333)
 
 [node name="LeftInner" type="RayCast2D" parent="."]
 position = Vector2(3.66667, -2.78155e-07)
 rotation = 3.14159
 scale = Vector2(2.34667, 1)
-target_position = Vector2(-0.28409, 28.3333)
+target_position = Vector2(-2.8491e-05, 27.6667)
 
 [node name="LeftOuter" type="RayCast2D" parent="."]
 position = Vector2(8.66667, 2.98023e-07)
@@ -367,6 +365,7 @@ target_position = Vector2(-0.28409, 28.3333)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1.90735e-06, 2.33333)
 scale = Vector2(0.333333, 0.333333)
+zoom = Vector2(1.3, 1.3)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 

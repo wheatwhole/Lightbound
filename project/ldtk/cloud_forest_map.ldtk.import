@@ -3,14 +3,14 @@
 importer="LDtk_world.import"
 type="PackedScene"
 uid="uid://bxib2vdko1yps"
-path="res://.godot/imported/cloud_forest_map.ldtk-bfc42801b6147485f7ae7f1ebe177a8b.scn"
+path="res://.godot/imported/cloud_forest_map.ldtk-727dfee7917884e24f555f99c4ca8c72.scn"
 
 [deps]
 
-files=["res://ldtkthing/cloud_forest_map/tilesets/cloud_forest_map-tileset-16x16.res"]
+files=["res://ldtk/cloud_forest_map/tilesets/cloud_forest_map-tileset-16x16.res"]
 
-source_file="res://ldtkthing/cloud_forest_map.ldtk"
-dest_files=["res://.godot/imported/cloud_forest_map.ldtk-bfc42801b6147485f7ae7f1ebe177a8b.scn", "res://ldtkthing/cloud_forest_map/tilesets/cloud_forest_map-tileset-16x16.res"]
+source_file="res://ldtk/cloud_forest_map.ldtk"
+dest_files=["res://.godot/imported/cloud_forest_map.ldtk-727dfee7917884e24f555f99c4ca8c72.scn", "res://ldtk/cloud_forest_map/tilesets/cloud_forest_map-tileset-16x16.res"]
 
 [params]
 

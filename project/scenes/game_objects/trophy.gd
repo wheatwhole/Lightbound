@@ -3,7 +3,7 @@ class_name Trophy
 
 @export_file("*tscn") var next_scene: String
 @export var level: int
-@export var next_level: String
+@export var next_level: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

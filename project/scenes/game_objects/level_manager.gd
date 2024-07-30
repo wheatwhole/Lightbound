@@ -18,6 +18,6 @@ func _on_trophy_body_entered(body):
 	if (body.name == "CharacterBody2D"):
 		Global.unlock_level(trophy.next_level)
 		print("trophy next level: ", trophy.next_level)
-		print(Global.levels_available[str(trophy.next_level)]) # prints "available"
+		print(Global.level_status(str(trophy.next_level))) # prints "available"
 		get_tree().change_scene_to_file(trophy.next_scene)
 

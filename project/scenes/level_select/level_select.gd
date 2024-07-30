@@ -7,7 +7,7 @@ class_name LevelSelect
 var parent_island_select: Node
 var back: int = 0
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready(): 
 	plricon.global_position = current_level.global_position
 
 func _on_back_button_up():
@@ -37,6 +37,6 @@ func _input(event):
 	
 	
 	if event.is_action_released("accept"):
-		print(Global.levels_available[current_level.level_name]) # when on 2 after completing level one, it prints unavailable this time. 
-		if current_level.next_scene_path and Global.levels_available[current_level.level_name] == true:
+		print(Global.level_status(current_level.worldwide_level_index)) # when on 2 after completing level one, it prints unavailable this time. 
+		if current_level.next_scene_path and Global.level_status(current_level.worldwide_level_index) == true:
 			get_tree().change_scene_to_file(current_level.next_scene_path)
