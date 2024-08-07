@@ -1,10 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://bny7irux0vi3"]
+[gd_scene load_steps=9 format=3 uid="uid://bny7irux0vi3"]
 
 [ext_resource type="Script" path="res://scenes/level_select/level_select.gd" id="1_303kd"]
 [ext_resource type="PackedScene" uid="uid://gxf4tk02q75y" path="res://scenes/level_select/cloud_forest/cloud_forest_map.tscn" id="2_kmnfy"]
 [ext_resource type="PackedScene" uid="uid://r33o4u1axsnf" path="res://scenes/level_select/level_icon.tscn" id="3_1bwyc"]
 [ext_resource type="PackedScene" uid="uid://dqt4r2upcl5xa" path="res://scenes/game_objects/plricon.tscn" id="4_2jv5w"]
 [ext_resource type="PackedScene" uid="uid://dip3ohgw5r4gr" path="res://scenes/back.tscn" id="5_cxrrv"]
+
+[sub_resource type="Gradient" id="Gradient_vmmvc"]
+offsets = PackedFloat32Array(0.603896)
+colors = PackedColorArray(0.360784, 0.411765, 0.623529, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_q2lh2"]
+gradient = SubResource("Gradient_vmmvc")
 
 [sub_resource type="Theme" id="Theme_vg7jq"]
 
@@ -15,13 +22,22 @@ offset_left = 406.0
 offset_top = -29.0
 offset_right = 446.0
 offset_bottom = 11.0
+size_flags_horizontal = 4
 script = ExtResource("1_303kd")
 metadata/_edit_horizontal_guides_ = [-112.0]
 
-[node name="cloud_forest_map" parent="." instance=ExtResource("2_kmnfy")]
-position = Vector2(-374, -230)
+[node name="Ocean" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -5166.0
+offset_top = -4715.0
+offset_right = 5354.0
+offset_bottom = 5869.0
+texture = SubResource("GradientTexture1D_q2lh2")
 
 [node name="Tilemaps" type="Node" parent="."]
+
+[node name="cloud_forest_map" parent="Tilemaps" instance=ExtResource("2_kmnfy")]
+position = Vector2(32, -259)
 
 [node name="Scene Objects" type="Node" parent="."]
 
@@ -37,6 +53,7 @@ offset_top = 1074.0
 offset_right = -1657.92
 offset_bottom = 1056.36
 theme = SubResource("Theme_vg7jq")
+worldwide_level_ID = 1
 level_name = "1"
 next_scene_path = "res://scenes/levels/level1.tscn"
 next_level_right = NodePath("../LevelIcon2")
@@ -51,8 +68,9 @@ offset_left = 3266.0
 offset_top = 624.0
 offset_right = 3248.08
 offset_bottom = 606.36
-worldwide_level_index = "2"
+worldwide_level_ID = 2
 level_name = "2"
+next_scene_path = "res://scenes/main_menu/main_menu.tscn"
 next_level_left = NodePath("../LevelIcon")
 
 [node name="plricon" parent="Scene Objects" instance=ExtResource("4_2jv5w")]
@@ -62,12 +80,17 @@ scale = Vector2(1, 1)
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Back" parent="UI" instance=ExtResource("5_cxrrv")]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -576.0
-offset_right = -512.0
-grow_horizontal = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-previous_scene = "res://scenes/island_select/island_select.tscn"
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2, 2)
+
+[connection signal="button_up" from="UI/Back" to="." method="_on_back_button_up"]

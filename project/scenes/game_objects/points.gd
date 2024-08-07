@@ -1,7 +1,7 @@
 extends Panel
 class_name Points
 
-@onready var label = $Label
+@onready var label: Node = $Label
 @export var points: int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -2,7 +2,7 @@ extends Node
 
 var levels:  Array
 
-var levels_available: Dictionary
+var levels_available: Array
 
 var islands: Array
 var islands_formatted: Array
@@ -14,29 +14,29 @@ func _ready():
 	islands = ["cloud_forest","shattered_savanna"]
 	islands_formatted = ["Cloud Forest", "Shattered Savanna"]
 	
-	levels_available = {
-		"1" : true,
-		"2" : false,
-		"3" : false
-	}
+	levels_available = [
+		# Arrays work differenty in godot. Plugging "0" into an array returns the first value, "1" returns the second value and so on.
+		# The numbers next to the "true or false" statements are referencing the number of the level
+		true, #1
+		false, #2
+		false #3
+	]
 	
-func unlock_level(lvlname):
-	var level = levels_available[str(lvlname)]
-	level = true
-	return level
+	print(levels_available.size())
 	
-func level_status(lvlname):
-	var level_status = levels_available[lvlname]
-	return level_status
+func unlock_level(levelid: int):
+	levels_available[levelid] = true
+	return levels_available[levelid]
+	
+func level_status(levelid: int):
+	var status = levels_available[levelid]
+	return status
 
-func clone(path, pos):
+func clone(path, pos: Vector2):
 	var new_scene = load(path)
-	var clone = new_scene.instantiate()
-	clone.position = Vector2(pos)
-	return clone
-
-func set_current_island(islandid: int):
-	current_island = islands[islandid]
+	var newobject = new_scene.instantiate()
+	newobject.position = Vector2(pos)
+	return newobject
 
 func get_island_formatted(islandid: int):
 	return islands_formatted[islandid]

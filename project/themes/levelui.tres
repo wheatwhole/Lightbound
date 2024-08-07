@@ -5,7 +5,9 @@
 [ext_resource type="StyleBox" uid="uid://cbnul3wtp7etb" path="res://themes/styleboxes/yellowboard.tres" id="3_ssslj"]
 
 [resource]
-HeartsMargin/base_type = &"MarginConta"
+HeartsMargin/base_type = &"MarginContainer"
+HeartsMargin/constants/margin_left = 2
+HeartsMargin/constants/margin_right = 2
 MarginContainer/constants/margin_bottom = 0
 MarginContainer/constants/margin_left = 2
 MarginContainer/constants/margin_right = 2

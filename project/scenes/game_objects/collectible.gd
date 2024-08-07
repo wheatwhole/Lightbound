@@ -11,7 +11,8 @@ extends Area2D
 @export_enum("apple", "banana", "melon", "strawberry", "kiwi", "cherry", "orange", "pineapple") var Fruit: String
 @export_enum("vertical", "horizontal", "square") var Layout: String
 @export var amount: int
-@export var fruit_order = {
+
+@export var fruit_order = { #Parameters for what the fruits should be when spawned in order
 "1": "", 
 "2": "", 
 "3": "", 
@@ -30,29 +31,29 @@ extends Area2D
 "16": "",
 "17": "",
  }
-
+func dup():
+		var duplicate = Global.clone("res://scenes/game_objects/collectible.tscn", self.position)
+		return duplicate 
+		
 func _ready():
 	anim.play(Fruit)
 	print(Fruit)
 	await get_parent().ready
 	if Layout == "vertical": 
 		for n in range(0,amount,+1):
-			var dup = Global.clone("res://scenes/game_objects/collectible.tscn", self.position)
+			var dup = dup()
 			self.get_parent().add_child.call_deferred(dup)
 			dup.position += Vector2(0, -60*n)
 			dup.Fruit = fruit_order[str(n+1)]
 		queue_free()
 	elif Layout == "horizontal": 
 		for n in range(0,amount,+1):
-			var dup = Global.clone("res://scenes/game_objects/collectible.tscn", self.position)
+			var dup = dup()
 			self.get_parent().add_child.call_deferred(dup)
 			dup.position += Vector2(60*n,0)
 			dup.Fruit = fruit_order[str(n+1)]
 		queue_free()
-
 		
-
-
 func _process(_delta):
 	if Engine.is_editor_hint():
 		pass

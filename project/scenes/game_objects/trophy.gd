@@ -1,7 +1,8 @@
 extends Node
 class_name Trophy
 
-@export_file("*tscn") var next_scene: String
+@export var next_scene_packed: PackedScene = load("res://scenes/level_select/cloud_forest/level_select.tscn")
+@onready var next_scene: IslandSelect = next_scene_packed.instantiate()
 @export var level: int
 @export var next_level: int
 
@@ -9,5 +10,5 @@ class_name Trophy
 func _ready():
 	pass # Replace with function body.
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

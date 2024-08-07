@@ -3,6 +3,7 @@ extends ParallaxBackground
 @onready var cloud1 = $Layer3
 @onready var cloud2 = $Layer4
 @onready var cloud3 = $Layer5
+@export var Scale: bool
 #var cloud1scene = preload("res://layer_3.tscn")
 #var cloud2scene = preload("res://layer_4.tscn")
 #var cloud3scene = preload("res://layer_5.tscn")
@@ -13,9 +14,13 @@ var rng = RandomNumberGenerator.new()
 func _ready():
 	rng.randomize() # Replace with function body.
 	#spawn_dup_cloud()
-
+	if Scale == false:
+		for _i in self.get_children():
+			_i.motion_scale.x = 1
+			_i.motion_scale.y = 1
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 #
 #func spawn_dup_cloud():
@@ -33,6 +38,8 @@ func _process(delta):
 	#cloud3dup.motion_scale.x = randf_range(1,4.6)
 #
 func _on_layer_1_draw():
-
-	cloud1.motion_scale.x = randf_range(1,1.6)
+	if Scale == true:
+		cloud1.motion_scale.x = randf_range(1,1.6)
+	else:
+		cloud1.motion_scale.x = 1
 

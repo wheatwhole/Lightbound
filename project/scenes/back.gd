@@ -1,4 +1,4 @@
-extends Control
+extends Button
 
 @export_file("*.tscn") var previous_scene: String
 
@@ -10,11 +10,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
-
-func _on_back_button_up():
-	if previous_scene:
-		get_tree().change_scene_to_file(previous_scene)
 		
 func _input(event):
 	if previous_scene and event.is_action_released("cancel"):
+		get_tree().change_scene_to_file(previous_scene)
+
+
+func _on_button_up():
+	if previous_scene:
 		get_tree().change_scene_to_file(previous_scene)

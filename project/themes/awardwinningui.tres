@@ -1,9 +1,10 @@
-[gd_resource type="Theme" load_steps=11 format=3 uid="uid://brrqirrrbvlpd"]
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://brrqirrrbvlpd"]
 
 [ext_resource type="StyleBox" uid="uid://cbnul3wtp7etb" path="res://themes/styleboxes/yellowboard.tres" id="3_5occs"]
 [ext_resource type="StyleBox" uid="uid://defdwnfqbk7y8" path="res://themes/styleboxes/yellowpaper.tres" id="3_dmemv"]
 [ext_resource type="StyleBox" uid="uid://bfsh8f18xm3ni" path="res://themes/styleboxes/greenboard.tres" id="3_lunga"]
 [ext_resource type="FontFile" uid="uid://ccv4gkhtjne47" path="res://assets/ui/humblefonts/matchup-pro-v1.1/MatchupPro.woff" id="3_m5in0"]
+[ext_resource type="StyleBox" uid="uid://cufon377c8fin" path="res://themes/styleboxes/health.tres" id="5_gbxag"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a5il4"]
 
@@ -44,6 +45,9 @@ Button/styles/normal = SubResource("StyleBoxEmpty_8t3qo")
 Button/styles/pressed = SubResource("StyleBoxEmpty_3omb4")
 GreenBoard/base_type = &"Panel"
 GreenBoard/styles/panel = ExtResource("3_lunga")
+HeartsMargin/base_type = &"MarginContainer"
+HeartsMargin/constants/margin_left = 0
+HeartsMargin/constants/margin_right = -4
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_cvxdx")
 ShadedText/base_type = &"Label"
 ShadedText/colors/font_shadow_color = Color(0.129412, 0.121569, 0.188235, 1)
@@ -54,6 +58,8 @@ YellowBoard/base_type = &"Panel"
 YellowBoard/styles/panel = ExtResource("3_5occs")
 YellowPaper/base_type = &"Panel"
 YellowPaper/styles/panel = ExtResource("3_dmemv")
+health/base_type = &"Panel"
+health/styles/panel = ExtResource("5_gbxag")
 title/base_type = &"Label"
 title/colors/font_color = Color(1, 1, 1, 1)
 title/colors/font_shadow_color = Color(0.129412, 0.121569, 0.188235, 1)

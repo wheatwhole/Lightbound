@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
 
-var jumping = 0
-const SPEED = 166
-const JUMP_VELOCITY = -350.0
-const ACCELERATION = 6.66
-const FRICTION = 1666
+var jumping: float = 0
+const SPEED: float = 170
+const JUMP_VELOCITY: float = -350.0
+const ACCELERATION: float = 20
+const FRICTION: float = 1666
 var prevVelocity = Vector2.ZERO
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -33,7 +33,7 @@ func handle_animation ():
 	if velocity.y > 100:
 		animation_player.play("fall")
 	
-func _physics_process(delta):	
+func _physics_process(_delta):	
 	if not is_on_floor():
 		# velocity.x=lerp(prevVelocity.x, velocity.x, 0)
 		velocity.y += gravity*gravity_multiplier

@@ -5,5 +5,5 @@
 [resource]
 texture = ExtResource("1_e7gps")
 axis_stretch_horizontal = 2
-axis_stretch_vertical = 1
-region_rect = Rect2(20, 1, 13, 11)
+axis_stretch_vertical = 2
+region_rect = Rect2(20, 12, 12, 11)
