@@ -100,8 +100,8 @@
         <mxCell id="mZcW2EEmMSQklxctBWLc-69" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-550.71" y="-2046" width="242.71" height="66" as="geometry" />
         </mxCell>
-        <mxCell id="mZcW2EEmMSQklxctBWLc-70" value="&lt;h1 style=&quot;margin-top: 0px; font-size: 24px;&quot;&gt;Dash maximum distance&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;horizontal=1;imageAspect=1;absoluteArcSize=0;autosize=0;autosizeGrid=1;fixedWidth=0;fontSize=24;" vertex="1" parent="1">
-          <mxGeometry x="-495" y="-2596" width="308" height="44" as="geometry" />
+        <mxCell id="mZcW2EEmMSQklxctBWLc-70" value="&lt;h1 style=&quot;margin-top: 0px; font-size: 24px;&quot;&gt;Wall jump on blocks for high ground&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;horizontal=1;imageAspect=1;absoluteArcSize=0;autosize=0;autosizeGrid=1;fixedWidth=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="-270.24" y="-2178" width="308" height="66" as="geometry" />
         </mxCell>
         <mxCell id="mZcW2EEmMSQklxctBWLc-73" value="" style="rounded=0;whiteSpace=wrap;html=1;glass=0;shadow=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
           <mxGeometry x="-495" y="-2508" width="396" height="110" as="geometry" />
