@@ -51,11 +51,11 @@ func _physics_process(_delta):
 	if !player == null and Input.is_action_just_released("jump"):
 		if $RightOuter.is_colliding() and !$RightInner.is_colliding() \
 			and !$LeftInner.is_colliding() and !$LeftOuter.is_colliding():
-				player.global_position.x += 4
+				player.global_position.x += 7
 				
 		elif $LeftOuter.is_colliding() and !$RightInner.is_colliding() \
 			and !$LeftInner.is_colliding() and !$RightOuter.is_colliding():
-				player.global_position.x -= 4
+				player.global_position.x -= 7
 
 	var direction = Input.get_axis("left", "right")
 	if direction:

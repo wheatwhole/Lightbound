@@ -41,7 +41,7 @@ func post_import(tileset: TileSet) -> TileSet:
 					var tile_custom_data :Dictionary= tile_data.get_custom_data(CUSTOM_DATA_LAYER_NAME)
 					if tile_custom_data != null and tile_custom_data != {}:
 						var enums :Array = tile_custom_data.get("enums")
-						if enums.has("Walls"):
+						if enums.has("One_way_platform"):
 							tile_data.add_collision_polygon(physics_layer_id)
 							tile_data.set_collision_polygon_points(
 								physics_layer_id,
@@ -54,6 +54,16 @@ func post_import(tileset: TileSet) -> TileSet:
 										Vector2(tile_extents.x, -tile_extents.y)
 									]
 								)
+							)
+							tile_data.set_collision_polygon_one_way(
+								physics_layer_id,
+								0,
+								true
+							)
+							tile_data.set_collision_polygon_one_way_margin(
+								physics_layer_id,
+								0,
+								1
 							)
 
 	return tileset

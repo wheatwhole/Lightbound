@@ -16,3 +16,4 @@ texture = ExtResource("1_qsh73")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_bcljy")
+debug_color = Color(0.635294, 0.513726, 0.321569, 0.419608)
