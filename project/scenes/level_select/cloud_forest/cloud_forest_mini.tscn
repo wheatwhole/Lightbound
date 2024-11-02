@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1n74x48rajid"]
+
+[ext_resource type="PackedScene" uid="uid://ckqlw3x682hxh" path="res://ldtk/cloud_forest_mini.ldtk" id="1_xu5bb"]
+
+[node name="cloud_forest_mini" instance=ExtResource("1_xu5bb")]

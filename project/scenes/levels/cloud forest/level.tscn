@@ -1,0 +1,95 @@
+[gd_scene load_steps=15 format=3 uid="uid://cvn16758rhxea"]
+
+[ext_resource type="Script" path="res://scenes/levels/cloud forest/level.gd" id="1_ir7x7"]
+[ext_resource type="PackedScene" uid="uid://3fj48xbyj0pa" path="res://falling_grounds/cloud_forest_falling_ground.tscn" id="2_1vjxr"]
+[ext_resource type="PackedScene" uid="uid://ccvn4owdcsele" path="res://scenes/game_objects/level_manager.tscn" id="2_5na3x"]
+[ext_resource type="PackedScene" uid="uid://ijgykl1jlbnd" path="res://ldtk/cloud_forest_level.ldtk" id="3_yg8av"]
+[ext_resource type="PackedScene" uid="uid://c5j8l1lh01841" path="res://scenes/game_objects/character/main_character.tscn" id="4_tgxm3"]
+[ext_resource type="PackedScene" uid="uid://dxvgabb88814w" path="res://scenes/game_objects/trophy.tscn" id="5_mqjl6"]
+[ext_resource type="PackedScene" uid="uid://duk6xqmcinbi7" path="res://scenes/island_select/island_select.tscn" id="6_p3yuj"]
+[ext_resource type="Script" path="res://scenes/game_objects/fall_area.gd" id="7_cqgvh"]
+[ext_resource type="PackedScene" uid="uid://w173w73pjist" path="res://scenes/game_objects/level_ui.tscn" id="8_r0ii5"]
+[ext_resource type="PackedScene" uid="uid://5wo4ahrx2602" path="res://scenes/game_objects/background.tscn" id="9_4aalx"]
+[ext_resource type="PackedScene" uid="uid://bjhrvky6j2m2q" path="res://scenes/mushroom/mushroom.tscn" id="9_mfnvi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdsv6"]
+size = Vector2(313, 1217.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pw3fe"]
+size = Vector2(1950, 60.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86igd"]
+size = Vector2(1131.75, 277.5)
+
+[node name="level1" type="Node"]
+script = ExtResource("1_ir7x7")
+
+[node name="Cloud Forest Falling Ground" parent="." instance=ExtResource("2_1vjxr")]
+position = Vector2(294, 375)
+
+[node name="Level Manager" parent="." instance=ExtResource("2_5na3x")]
+
+[node name="Scene Objects" type="Node" parent="."]
+
+[node name="cloud_forest_level" parent="Scene Objects" instance=ExtResource("3_yg8av")]
+position = Vector2(0, 175)
+
+[node name="CharacterBody2D" parent="Scene Objects" instance=ExtResource("4_tgxm3")]
+position = Vector2(43, 305)
+
+[node name="Collectables Group" type="Node" parent="Scene Objects"]
+
+[node name="trophy" parent="Scene Objects" instance=ExtResource("5_mqjl6")]
+position = Vector2(1318, -39)
+next_scene_packed = ExtResource("6_p3yuj")
+level = 1
+next_level = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Scene Objects"]
+position = Vector2(530, 414)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Scene Objects/StaticBody2D"]
+position = Vector2(3674, -26)
+shape = SubResource("RectangleShape2D_hdsv6")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Scene Objects/StaticBody2D"]
+position = Vector2(-1460, 83)
+shape = SubResource("RectangleShape2D_hdsv6")
+
+[node name="Area2D" type="Area2D" parent="Scene Objects"]
+position = Vector2(-390, 254)
+script = ExtResource("7_cqgvh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Scene Objects/Area2D"]
+position = Vector2(1337, 209)
+shape = SubResource("RectangleShape2D_pw3fe")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Scene Objects/Area2D"]
+position = Vector2(2170, 855)
+shape = SubResource("RectangleShape2D_86igd")
+
+[node name="Mushroom" parent="Scene Objects" instance=ExtResource("9_mfnvi")]
+position = Vector2(82, 303)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="level_ui" parent="UI" instance=ExtResource("8_r0ii5")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_right = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(1, 1)
+size_flags_horizontal = 0
+
+[node name="Mushrooms" type="Node" parent="."]
+
+[node name="Background" parent="." instance=ExtResource("9_4aalx")]
+offset = Vector2(0, 100)
+transform = Transform2D(1, 0, 0, 1, 0, 100)
+
+[connection signal="body_entered" from="Scene Objects/trophy" to="." method="_on_trophy_body_entered"]
+[connection signal="body_entered" from="Scene Objects/trophy" to="Level Manager" method="_on_trophy_body_entered"]
+[connection signal="body_entered" from="Scene Objects/Area2D" to="Scene Objects/Area2D" method="_on_body_entered"]

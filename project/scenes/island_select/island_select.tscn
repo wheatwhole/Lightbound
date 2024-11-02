@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://duk6xqmcinbi7"]
 
 [ext_resource type="Script" path="res://scenes/island_select/island_select.gd" id="1_x2ksv"]
-[ext_resource type="PackedScene" uid="uid://dmyx3jnb1h51i" path="res://scenes/island_select/cloud_forest_mini.tscn" id="5_dxp6k"]
+[ext_resource type="PackedScene" uid="uid://dmyx3jnb1h51i" path="res://scenes/island_select/cloud_forest/cloud_forest_mini.tscn" id="5_pxyvd"]
 [ext_resource type="PackedScene" uid="uid://dip3ohgw5r4gr" path="res://scenes/back.tscn" id="5_vwpgq"]
 [ext_resource type="PackedScene" uid="uid://dqt4r2upcl5xa" path="res://scenes/game_objects/plricon.tscn" id="22_eh2vo"]
 [ext_resource type="PackedScene" uid="uid://4iyll8cohv4j" path="res://scenes/island_select/island_icon.tscn" id="23_f64jf"]
@@ -69,5 +69,5 @@ grow_vertical = 1
 scale = Vector2(2, 2)
 previous_scene = "res://scenes/main_menu/main_menu.tscn"
 
-[node name="cloud_forest_mini" parent="." instance=ExtResource("5_dxp6k")]
+[node name="cloud_forest_mini" parent="." instance=ExtResource("5_pxyvd")]
 position = Vector2(-95, -415)

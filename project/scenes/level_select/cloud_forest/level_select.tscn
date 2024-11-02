@@ -55,7 +55,7 @@ offset_bottom = 1056.36
 theme = SubResource("Theme_vg7jq")
 worldwide_level_ID = 1
 level_name = "1"
-next_scene_path = "res://scenes/levels/level1.tscn"
+next_scene_path = "res://scenes/levels/cloud forest/level.tscn"
 next_level_right = NodePath("../LevelIcon2")
 
 [node name="LevelIcon2" parent="Scene Objects" node_paths=PackedStringArray("next_level_left") instance=ExtResource("3_1bwyc")]
