@@ -2,20 +2,19 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cgx0lujuhimxq"
-path="res://.godot/imported/MatchupPro.ttf-247ac3fe1ac318d55ead4c2ea70d062f.fontdata"
+uid="uid://v73gt8ptba4v"
+path="res://.godot/imported/FutilePro.ttf-d2283204b25b60cda42b52a19dbd8033.fontdata"
 
 [deps]
 
-source_file="res://assets/ui/humblefonts/matchup-pro-v1.1/MatchupPro.ttf"
-dest_files=["res://.godot/imported/MatchupPro.ttf-247ac3fe1ac318d55ead4c2ea70d062f.fontdata"]
+source_file="res://assets/ui/humblefonts/futile-pro-v1/FutilePro.ttf"
+dest_files=["res://.godot/imported/FutilePro.ttf-d2283204b25b60cda42b52a19dbd8033.fontdata"]
 
 [params]
 
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
-disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48
