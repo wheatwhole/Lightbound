@@ -2,20 +2,19 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ccv4gkhtjne47"
-path="res://.godot/imported/MatchupPro.woff-d1ade4fa969c81464e929b3bd7ea804d.fontdata"
+uid="uid://bxk36bmql8prd"
+path="res://.godot/imported/ExpressionPro.otf-5f5b5f77a7ddf7602f16b49e97d23a6a.fontdata"
 
 [deps]
 
-source_file="res://assets/ui/humblefonts/matchup-pro-v1.1/MatchupPro.woff"
-dest_files=["res://.godot/imported/MatchupPro.woff-d1ade4fa969c81464e929b3bd7ea804d.fontdata"]
+source_file="res://assets/ui/humblefonts/expression-pro-v1.1/ExpressionPro.otf"
+dest_files=["res://.godot/imported/ExpressionPro.otf-5f5b5f77a7ddf7602f16b49e97d23a6a.fontdata"]
 
 [params]
 
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
-disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48

@@ -2,20 +2,19 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b778ron5xbvg0"
-path="res://.godot/imported/ExpressionPro.ttf-784169672cb69c2e35a425958ce65b8e.fontdata"
+uid="uid://cxvvveeil52mc"
+path="res://.godot/imported/CompassPro.ttf-79b7286e0d0ca71cf169d1873f40a740.fontdata"
 
 [deps]
 
-source_file="res://assets/ui/humblefonts/expression-pro-v1.1/ExpressionPro.ttf"
-dest_files=["res://.godot/imported/ExpressionPro.ttf-784169672cb69c2e35a425958ce65b8e.fontdata"]
+source_file="res://assets/ui/humblefonts/compass-pro-v1.1/CompassPro.ttf"
+dest_files=["res://.godot/imported/CompassPro.ttf-79b7286e0d0ca71cf169d1873f40a740.fontdata"]
 
 [params]
 
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
-disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48
