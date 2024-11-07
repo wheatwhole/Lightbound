@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://r33o4u1axsnf"]
 
 [ext_resource type="Script" path="res://scenes/level_select/level_icon.gd" id="1_jy523"]
-[ext_resource type="Theme" uid="uid://brrqirrrbvlpd" path="res://resources/themes/awardwinningui.tres" id="2_dm7se"]
+[ext_resource type="Theme" uid="uid://brrqirrrbvlpd" path="res://themes/awardwinningui.tres" id="2_46cmm"]
 
 [node name="LevelIcon" type="Control"]
 layout_mode = 3
@@ -17,6 +17,6 @@ texture_filter = 1
 layout_mode = 0
 offset_top = -23.0
 offset_right = 25.0
-theme = ExtResource("2_dm7se")
+theme = ExtResource("2_46cmm")
 theme_type_variation = &"ShadedText"
 theme_override_font_sizes/font_size = 32

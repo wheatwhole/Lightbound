@@ -17,9 +17,9 @@ func _ready():
 	levels_available = [
 		# Arrays work differenty in godot. Plugging "0" into an array returns the first value, "1" returns the second value and so on.
 		# The numbers next to the "true or false" statements are referencing the number of the level
-		true, #0
-		false, #1
-		false #2
+		true, #1
+		false, #2
+		false #3
 	]
 	
 	print(levels_available.size())

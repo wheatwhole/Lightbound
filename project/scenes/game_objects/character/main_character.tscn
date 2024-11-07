@@ -205,7 +205,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xhd22"]
-size = Vector2(20, 22)
+size = Vector2(22, 26)
 
 [sub_resource type="Animation" id="Animation_jka1k"]
 length = 0.001
@@ -331,7 +331,7 @@ autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
-position = Vector2(1, 4)
+position = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_xhd22")
 
 [node name="CoyoteTimer" type="Timer" parent="."]

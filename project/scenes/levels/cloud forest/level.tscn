@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://cvn16758rhxea"]
 
 [ext_resource type="Script" path="res://scenes/levels/cloud forest/level.gd" id="1_ir7x7"]
-[ext_resource type="PackedScene" uid="uid://3fj48xbyj0pa" path="res://falling_grounds/cloud_forest/cloud_forest_falling_ground.tscn" id="2_1vjxr"]
+[ext_resource type="PackedScene" uid="uid://3fj48xbyj0pa" path="res://falling_grounds/cloud_forest_falling_ground.tscn" id="2_1vjxr"]
 [ext_resource type="PackedScene" uid="uid://ccvn4owdcsele" path="res://scenes/game_objects/level_manager.tscn" id="2_5na3x"]
 [ext_resource type="PackedScene" uid="uid://ijgykl1jlbnd" path="res://ldtk/cloud_forest_level.ldtk" id="3_yg8av"]
 [ext_resource type="PackedScene" uid="uid://c5j8l1lh01841" path="res://scenes/game_objects/character/main_character.tscn" id="4_tgxm3"]
@@ -25,7 +25,7 @@ size = Vector2(1131.75, 277.5)
 script = ExtResource("1_ir7x7")
 
 [node name="Cloud Forest Falling Ground" parent="." instance=ExtResource("2_1vjxr")]
-position = Vector2(416, 311)
+position = Vector2(294, 375)
 
 [node name="Level Manager" parent="." instance=ExtResource("2_5na3x")]
 
