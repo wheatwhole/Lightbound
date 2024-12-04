@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://w173w73pjist"]
 
 [ext_resource type="Script" path="res://scenes/game_objects/level_ui.gd" id="1_smvu4"]
-[ext_resource type="Theme" uid="uid://brrqirrrbvlpd" path="res://themes/awardwinningui.tres" id="3_nem74"]
+[ext_resource type="Theme" uid="uid://brrqirrrbvlpd" path="res://resources/themes/awardwinningui.tres" id="3_nem74"]
 [ext_resource type="Script" path="res://scenes/game_objects/points.gd" id="3_vfgjo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y85ov"]

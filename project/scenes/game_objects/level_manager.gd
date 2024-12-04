@@ -19,7 +19,7 @@ func add_point():
 func _on_trophy_body_entered(body):
 	if (body.name == "CharacterBody2D"):
 		Global.unlock_level(trophy.next_level-1)
-		print("trophy next level: ", trophy.next_level-1)
+		print("trophy next level: ", trophy.next_level-1) #subtract 1s, since 0 in an Array is the first item, 1 is second, so on
 		print(Global.level_status(trophy.next_level-1)) # prints "available"
 		# get_tree().change_scene_to_file(trophy.next_scene) # Replace with function body.
 		if trophy.next_scene:
