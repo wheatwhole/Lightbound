@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 var jumping: float = 0
 const SPEED: float = 170
-const JUMP_VELOCITY: float = -350.0
+const JUMP_VELOCITY: float = -350.0 # negative because setting to positive just doesnt work. Probably because y in godot is negative
 const ACCELERATION: float = 20
 const FRICTION: float = 1666
 var prevVelocity = Vector2.ZERO
@@ -47,7 +47,10 @@ func _physics_process(_delta):
 		
 	if Input.is_action_just_released("jump"):
 		velocity.y *= 0.45
-		
+	
+	if Input.is_action_just_released("dash"):
+		velocity.y += JUMP_VELOCITY*2
+		velocity.x += 400
 	if !player == null and Input.is_action_just_released("jump"):
 		if $RightOuter.is_colliding() and !$RightInner.is_colliding() \
 			and !$LeftInner.is_colliding() and !$LeftOuter.is_colliding():

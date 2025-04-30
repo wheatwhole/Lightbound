@@ -42,4 +42,3 @@ func _on_layer_1_draw():
 		cloud1.motion_scale.x = randf_range(1,1.6)
 	else:
 		cloud1.motion_scale.x = 1
-

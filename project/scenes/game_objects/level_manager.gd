@@ -32,4 +32,3 @@ func _on_trophy_body_entered(body):
 			get_tree().get_root().add_child(trophy.next_scene)
 			get_tree().current_scene = trophy_next_scene
 			get_tree().get_root().remove_child(level)
-

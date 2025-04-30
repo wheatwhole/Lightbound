@@ -64,4 +64,3 @@ func _on_body_entered(body):
 		anim.play("collected")
 		await anim.animation_finished
 		queue_free()
-

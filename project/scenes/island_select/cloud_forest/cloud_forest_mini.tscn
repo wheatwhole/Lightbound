@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmyx3jnb1h51i"]
-
-[ext_resource type="PackedScene" uid="uid://ckqlw3x682hxh" path="res://ldtk/cloud_forest_mini.ldtk" id="1_8whnq"]
-[ext_resource type="TileSet" uid="uid://qd3hjhwdthcj" path="res://ldtk/cloud_forest_mini/tilesets/cloud_forest_mini-tileset-16x16.res" id="2_dcwhd"]
-
-[node name="cloud_forest_mini" instance=ExtResource("1_8whnq")]
-
-[node name="Level_0-tilemap-16x16" parent="Level_0" index="0"]
-tile_set = ExtResource("2_dcwhd")

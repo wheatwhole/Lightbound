@@ -1,14 +1,15 @@
 extends Node
 
 var levels:  Array
-
+var reloadfixstatus = 0
 var levels_available: Array
 
 var islands: Array
 var islands_formatted: Array
 var current_island: String
-
+var falling_ground_anims: Dictionary
 func _ready():
+	reloadfixstatus = 0
 	levels = [1,2]
 	
 	islands = ["cloud_forest","shattered_savanna"]
@@ -24,6 +25,14 @@ func _ready():
 	
 	print(levels_available.size())
 	
+	falling_ground_anims = {
+		"2x2":0,
+		"2x3":1,
+		"2x4":2,
+		"2x5":3
+	}
+	
+
 func unlock_level(levelid: int):
 	levels_available[levelid] = true
 	return levels_available[levelid]
@@ -40,3 +49,6 @@ func clone(path, pos: Vector2):
 
 func get_island_formatted(islandid: int):
 	return islands_formatted[islandid]
+	
+func get_falling_ground_anim(size: String):
+	return falling_ground_anims[size] 
