@@ -48,9 +48,7 @@ func _physics_process(_delta):
 	if Input.is_action_just_released("jump"):
 		velocity.y *= 0.45
 	
-	if Input.is_action_just_released("dash"):
-		velocity.y += JUMP_VELOCITY*2
-		velocity.x += 400
+	
 	if !player == null and Input.is_action_just_released("jump"):
 		if $RightOuter.is_colliding() and !$RightInner.is_colliding() \
 			and !$LeftInner.is_colliding() and !$LeftOuter.is_colliding():
@@ -66,7 +64,9 @@ func _physics_process(_delta):
 		velocity.x = move_toward(velocity.x, direction*SPEED, ACCELERATION)
 	else:
 		velocity.x = move_toward(velocity.x, 0 , FRICTION)
-
+	if Input.is_action_just_released("dash"):
+		velocity.y += JUMP_VELOCITY
+		velocity.x += 300*direction
 	var was_in_air: bool = not is_on_floor()
 	var was_on_floor: bool = is_on_floor()
 	move_and_slide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://duk6xqmcinbi7"]
+[gd_scene load_steps=8 format=3 uid="uid://duk6xqmcinbi7"]
 
 [ext_resource type="Script" path="res://scenes/levels/island_select/island_select.gd" id="1_x2ksv"]
 [ext_resource type="PackedScene" uid="uid://dmyx3jnb1h51i" path="res://scenes/levels/island_select/cloud_forest/cloud_forest_mini.tscn" id="5_pxyvd"]
@@ -12,8 +12,6 @@ colors = PackedColorArray(0.360784, 0.411765, 0.623529, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_vt0ph"]
 gradient = SubResource("Gradient_l8m56")
-
-[sub_resource type="PackedScene" id="PackedScene_u6smf"]
 
 [node name="Island Select" type="Control"]
 layout_mode = 3
@@ -46,7 +44,6 @@ offset_right = 750.0
 offset_bottom = 453.0
 island_ID = 1
 next_island_left = NodePath("../Cloud Forest")
-level_select_packed = SubResource("PackedScene_u6smf")
 
 [node name="plricon" parent="Scene Objects" instance=ExtResource("22_eh2vo")]
 position = Vector2(209, 172)

@@ -27,12 +27,12 @@ script = ExtResource("1_ir7x7")
 
 [node name="Scene Objects" type="Node" parent="."]
 
+[node name="CloudForestLevel" parent="Scene Objects" instance=ExtResource("4_dvmeq")]
+position = Vector2(0, 175)
+
 [node name="Cloud Forest Falling Ground" parent="Scene Objects" instance=ExtResource("2_1vjxr")]
 position = Vector2(168, 231)
 ysize = "5"
-
-[node name="cloud_forest_level" parent="Scene Objects" instance=ExtResource("4_dvmeq")]
-position = Vector2(0, 175)
 
 [node name="CharacterBody2D" parent="Scene Objects" instance=ExtResource("4_tgxm3")]
 position = Vector2(43, 305)

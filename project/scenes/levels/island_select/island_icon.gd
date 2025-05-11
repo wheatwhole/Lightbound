@@ -8,8 +8,8 @@ class_name IslandIcon
 @export var next_island_left: IslandIcon
 @export var next_island_right: IslandIcon
 # To get variables from loaded scenes, a packed scene is used
-@export var level_select_packed: PackedScene = load("res://scenes/level_select/cloud_forest/level_select.tscn")
-@onready var level_select_scene: LevelSelect = level_select_packed.instantiate()
+# @export var level_select_packed: PackedScene = load("res://scenes/level_select/cloud_forest/level_select.tscn")
+# @onready var level_select_scene: LevelSelect = level_select_packed.instantiate()
 # Called when the node enters the scene tree for the first time.
 
 func _ready():

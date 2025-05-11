@@ -43,7 +43,7 @@ animations = [{
 [sub_resource type="GDScript" id="GDScript_af1uo"]
 script/source = "extends AnimatedSprite2D
 
-@onready var area = $Area2D
+@onready var area = $\"Scene Objects/Area2D\"
 "
 
 [sub_resource type="Animation" id="Animation_xxt2f"]
