@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://gxf4tk02q75y"]
 
-[ext_resource type="PackedScene" uid="uid://bxib2vdko1yps" path="res://ldtk/cloud_forest_map.ldtk" id="1_1bqux"]
-[ext_resource type="TileSet" uid="uid://dhy7jbbf844rs" path="res://ldtk/cloud_forest_map/tilesets/cloud_forest_map-tileset-16x16.res" id="2_7nes8"]
+[ext_resource type="PackedScene" uid="uid://dy5w20balilkg" path="res://ldtk/cloud_forest_map.ldtk" id="1_1bqux"]
+[ext_resource type="TileSet" uid="uid://b5peyelr3dg4o" path="res://ldtk/cloud_forest_map/tilesets/cloud_forest_map-tileset-16x16.res" id="2_7nes8"]
 
 [node name="cloud_forest_map" instance=ExtResource("1_1bqux")]
 

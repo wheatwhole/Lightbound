@@ -1,4 +1,3 @@
-@tool
 extends Control
 class_name IslandIcon
 
@@ -7,6 +6,8 @@ class_name IslandIcon
 @export var next_island_down: IslandIcon
 @export var next_island_left: IslandIcon
 @export var next_island_right: IslandIcon
+@export var level_scene_packed: PackedScene = load("res://scenes/levels/cloud forest/level.tscn")
+@onready var level_scene: Node = level_scene_packed.instantiate()
 # To get variables from loaded scenes, a packed scene is used
 # @export var level_select_packed: PackedScene = load("res://scenes/level_select/cloud_forest/level_select.tscn")
 # @onready var level_select_scene: LevelSelect = level_select_packed.instantiate()
@@ -14,8 +15,8 @@ class_name IslandIcon
 
 func _ready():
 	pass
+	print(level_scene)
+
 	
 func _process(_delta):
-	if Engine.is_editor_hint():
-			# $TextureRect.texture = load("res://Pixel Adventure 1/Free/Menu/Levels/" + str(worldwide_level_ID) +".png")
-			$Label.text=Global.get_island_formatted(island_ID)
+		$Label.text=Global.get_island_formatted(island_ID)

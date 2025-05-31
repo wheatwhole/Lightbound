@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://barnkxbg1balf"]
 
-[ext_resource type="Script" path="res://scenes/main_menu/menucamera.gd" id="1_t6n32"]
+[ext_resource type="Script" uid="uid://bb6owapcavsmc" path="res://scenes/main_menu/menucamera.gd" id="1_t6n32"]
 
 [node name="CharacterBody2D2" type="CharacterBody2D"]
 

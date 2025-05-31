@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cujqtgkfseu4j"]
 
-[ext_resource type="Texture2D" uid="uid://cfpqoktkf4b0d" path="res://assets/Background/Small Cloud 2.png" id="1_p4dtr"]
+[ext_resource type="Texture2D" uid="uid://v4fscxqdxir1" path="res://assets/Background/Small Cloud 2.png" id="1_p4dtr"]
 
 [node name="Layer4" type="ParallaxLayer"]
 texture_filter = 1

@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://bny7irux0vi3"]
 
-[ext_resource type="PackedScene" uid="uid://gxf4tk02q75y" path="res://scenes/levels/level_select/cloud_forest/cloud_forest_map.tscn" id="2_kmnfy"]
-[ext_resource type="PackedScene" uid="uid://r33o4u1axsnf" path="res://scenes/levels/level_select/level_icon.tscn" id="3_1bwyc"]
-[ext_resource type="PackedScene" uid="uid://dqt4r2upcl5xa" path="res://scenes/game_objects/plricon.tscn" id="4_2jv5w"]
-[ext_resource type="PackedScene" uid="uid://dip3ohgw5r4gr" path="res://scenes/back.tscn" id="5_cxrrv"]
+[ext_resource type="PackedScene" uid="uid://gxf4tk02q75y" path="res://scenes/levels/level_select/cloud_forest/cloud_forest_map.tscn" id="1_iqyfo"]
+[ext_resource type="PackedScene" uid="uid://r33o4u1axsnf" path="res://scenes/levels/level_select/level_icon.tscn" id="2_nsxbt"]
+[ext_resource type="PackedScene" uid="uid://dqt4r2upcl5xa" path="res://scenes/game_objects/plricon.tscn" id="3_ravqx"]
+[ext_resource type="PackedScene" uid="uid://dip3ohgw5r4gr" path="res://scenes/back.tscn" id="4_aqu1e"]
 
 [sub_resource type="Gradient" id="Gradient_vmmvc"]
 offsets = PackedFloat32Array(0.603896)
@@ -34,12 +34,12 @@ texture = SubResource("GradientTexture1D_q2lh2")
 
 [node name="Tilemaps" type="Node" parent="."]
 
-[node name="cloud_forest_map" parent="Tilemaps" instance=ExtResource("2_kmnfy")]
+[node name="cloud_forest_map" parent="Tilemaps" instance=ExtResource("1_iqyfo")]
 position = Vector2(32, -259)
 
 [node name="Scene Objects" type="Node" parent="."]
 
-[node name="LevelIcon" parent="Scene Objects" instance=ExtResource("3_1bwyc")]
+[node name="LevelIcon" parent="Scene Objects" instance=ExtResource("2_nsxbt")]
 texture_filter = 1
 anchors_preset = -1
 anchor_left = 2.8
@@ -52,7 +52,7 @@ offset_right = -1657.92
 offset_bottom = 1056.36
 theme = SubResource("Theme_vg7jq")
 
-[node name="LevelIcon2" parent="Scene Objects" instance=ExtResource("3_1bwyc")]
+[node name="LevelIcon2" parent="Scene Objects" instance=ExtResource("2_nsxbt")]
 anchors_preset = -1
 anchor_left = -4.425
 anchor_top = -0.525
@@ -63,13 +63,13 @@ offset_top = 624.0
 offset_right = 3248.08
 offset_bottom = 606.36
 
-[node name="plricon" parent="Scene Objects" instance=ExtResource("4_2jv5w")]
+[node name="plricon" parent="Scene Objects" instance=ExtResource("3_ravqx")]
 position = Vector2(127, 589)
 scale = Vector2(1, 1)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Back" parent="UI" instance=ExtResource("5_cxrrv")]
+[node name="Back" parent="UI" instance=ExtResource("4_aqu1e")]
 anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0

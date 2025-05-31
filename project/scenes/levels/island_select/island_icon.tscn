@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://4iyll8cohv4j"]
 
-[ext_resource type="Script" path="res://scenes/levels/island_select/island_icon.gd" id="1_a8lei"]
+[ext_resource type="Script" uid="uid://bpjyr2ye70b26" path="res://scenes/levels/island_select/island_icon.gd" id="1_a8lei"]
 [ext_resource type="Theme" uid="uid://brrqirrrbvlpd" path="res://resources/themes/awardwinningui.tres" id="3_qh8o3"]
 
 [node name="IslandIcon" type="Control"]

@@ -67,6 +67,7 @@ func _physics_process(_delta):
 	if Input.is_action_just_released("dash"):
 		velocity.y += JUMP_VELOCITY
 		velocity.x += 300*direction
+	
 	var was_in_air: bool = not is_on_floor()
 	var was_on_floor: bool = is_on_floor()
 	move_and_slide()

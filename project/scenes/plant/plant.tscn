@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://cxqx3e3ijumm"]
 
-[ext_resource type="Texture2D" uid="uid://sc4pti32eob2" path="res://assets/game_elements/enemies/Plant/Idle (44x42).png" id="1_srgkv"]
+[ext_resource type="Texture2D" uid="uid://dl1oooyld8t8s" path="res://assets/game_elements/enemies/Plant/Idle (44x42).png" id="1_srgkv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smpsj"]
 atlas = ExtResource("1_srgkv")

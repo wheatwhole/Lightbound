@@ -1,15 +1,15 @@
 [gd_scene load_steps=158 format=3 uid="uid://tt254qcpgnlk"]
 
-[ext_resource type="Texture2D" uid="uid://dqhlhpw26ne5r" path="res://assets/game_elements/Fruits/Apple.png" id="1_ieusx"]
-[ext_resource type="Script" path="res://scenes/game_objects/collectible.gd" id="1_ipepx"]
-[ext_resource type="Texture2D" uid="uid://dryb2ifyuhep5" path="res://assets/game_elements/Fruits/Collected.png" id="2_e5505"]
-[ext_resource type="Texture2D" uid="uid://iutofskliuio" path="res://assets/game_elements/Fruits/Bananas.png" id="3_2fl1d"]
-[ext_resource type="Texture2D" uid="uid://bp6iaoren3yaa" path="res://assets/game_elements/Fruits/Cherries.png" id="4_xu6um"]
-[ext_resource type="Texture2D" uid="uid://baqndoduj5kcs" path="res://assets/game_elements/Fruits/Kiwi.png" id="6_uj0tp"]
-[ext_resource type="Texture2D" uid="uid://t4hf61swxll3" path="res://assets/game_elements/Fruits/Melon.png" id="7_dtpqy"]
-[ext_resource type="Texture2D" uid="uid://citxqrcm0co0y" path="res://assets/game_elements/Fruits/Orange.png" id="8_0uyp0"]
-[ext_resource type="Texture2D" uid="uid://bywe1xegg1oqx" path="res://assets/game_elements/Fruits/Pineapple.png" id="9_lw7yy"]
-[ext_resource type="Texture2D" uid="uid://saqj00imiq07" path="res://assets/game_elements/Fruits/Strawberry.png" id="10_7fcva"]
+[ext_resource type="Texture2D" uid="uid://ccr0k4kyvhb2i" path="res://assets/game_elements/Fruits/Apple.png" id="1_ieusx"]
+[ext_resource type="Script" uid="uid://47n36w0cpkir" path="res://scenes/game_objects/collectible.gd" id="1_ipepx"]
+[ext_resource type="Texture2D" uid="uid://k715puvuaky1" path="res://assets/game_elements/Fruits/Collected.png" id="2_e5505"]
+[ext_resource type="Texture2D" uid="uid://brt208nwngk4b" path="res://assets/game_elements/Fruits/Bananas.png" id="3_2fl1d"]
+[ext_resource type="Texture2D" uid="uid://cvkob4lf0h1ce" path="res://assets/game_elements/Fruits/Cherries.png" id="4_xu6um"]
+[ext_resource type="Texture2D" uid="uid://doxxjkdxpofik" path="res://assets/game_elements/Fruits/Kiwi.png" id="6_uj0tp"]
+[ext_resource type="Texture2D" uid="uid://bdif3qjjfdmje" path="res://assets/game_elements/Fruits/Melon.png" id="7_dtpqy"]
+[ext_resource type="Texture2D" uid="uid://61xoj1i7jvt2" path="res://assets/game_elements/Fruits/Orange.png" id="8_0uyp0"]
+[ext_resource type="Texture2D" uid="uid://bb532p5jdf8w3" path="res://assets/game_elements/Fruits/Pineapple.png" id="9_lw7yy"]
+[ext_resource type="Texture2D" uid="uid://cbr7ig34qu0yd" path="res://assets/game_elements/Fruits/Strawberry.png" id="10_7fcva"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8l715"]
 atlas = ExtResource("1_ieusx")
@@ -1099,8 +1099,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oaxq1"]
 _data = {
-"RESET": SubResource("Animation_73bnx"),
-"banana": SubResource("Animation_6gudf")
+&"RESET": SubResource("Animation_73bnx"),
+&"banana": SubResource("Animation_6gudf")
 }
 
 [node name="Collectible" type="Area2D"]

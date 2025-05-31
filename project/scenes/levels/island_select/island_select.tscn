@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://duk6xqmcinbi7"]
+[gd_scene load_steps=9 format=3 uid="uid://duk6xqmcinbi7"]
 
-[ext_resource type="Script" path="res://scenes/levels/island_select/island_select.gd" id="1_x2ksv"]
+[ext_resource type="Script" uid="uid://dypo8ohtv4hie" path="res://scenes/levels/island_select/island_select.gd" id="1_x2ksv"]
+[ext_resource type="PackedScene" uid="uid://cvn16758rhxea" path="res://scenes/levels/cloud forest/level.tscn" id="3_h05ho"]
 [ext_resource type="PackedScene" uid="uid://dmyx3jnb1h51i" path="res://scenes/levels/island_select/cloud_forest/cloud_forest_mini.tscn" id="5_pxyvd"]
 [ext_resource type="PackedScene" uid="uid://dip3ohgw5r4gr" path="res://scenes/back.tscn" id="5_vwpgq"]
 [ext_resource type="PackedScene" uid="uid://dqt4r2upcl5xa" path="res://scenes/game_objects/plricon.tscn" id="22_eh2vo"]
@@ -30,20 +31,24 @@ texture = SubResource("GradientTexture1D_vt0ph")
 
 [node name="Scene Objects" type="Node" parent="."]
 
-[node name="Cloud Forest" parent="Scene Objects" instance=ExtResource("23_f64jf")]
-offset_left = 207.0
-offset_top = 169.0
-offset_right = 239.0
-offset_bottom = 201.0
+[node name="Cloud Forest" parent="Scene Objects" node_paths=PackedStringArray("next_island_left", "next_island_right") instance=ExtResource("23_f64jf")]
+offset_left = 240.0
+offset_top = 148.0
+offset_right = 272.0
+offset_bottom = 180.0
 scale = Vector2(0.974284, 1)
+next_island_left = NodePath("../Shattered Savanna")
+next_island_right = NodePath("../Shattered Savanna")
+level_scene_packed = ExtResource("3_h05ho")
 
-[node name="Shattered Savanna" parent="Scene Objects" node_paths=PackedStringArray("next_island_left") instance=ExtResource("23_f64jf")]
+[node name="Shattered Savanna" parent="Scene Objects" node_paths=PackedStringArray("next_island_left", "next_island_right") instance=ExtResource("23_f64jf")]
 offset_left = 686.0
 offset_top = 389.0
 offset_right = 750.0
 offset_bottom = 453.0
 island_ID = 1
 next_island_left = NodePath("../Cloud Forest")
+next_island_right = NodePath("../Cloud Forest")
 
 [node name="plricon" parent="Scene Objects" instance=ExtResource("22_eh2vo")]
 position = Vector2(209, 172)

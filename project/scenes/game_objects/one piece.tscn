@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://0lqyn6q18rac"]
 
-[ext_resource type="Texture2D" uid="uid://dbfls7ypy2dhr" path="res://assets/game_elements/Checkpoints/End/End (Idle).png" id="1_p3oo3"]
+[ext_resource type="Texture2D" uid="uid://8imxyk5vo13r" path="res://assets/game_elements/Checkpoints/End/End (Idle).png" id="1_p3oo3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcljy"]
 size = Vector2(76, 72)
