@@ -42,8 +42,6 @@ animations = [{
 
 [sub_resource type="GDScript" id="GDScript_af1uo"]
 script/source = "extends AnimatedSprite2D
-
-@onready var area = $\"Scene Objects/Area2D\"
 "
 
 [sub_resource type="Animation" id="Animation_xxt2f"]
@@ -83,7 +81,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3rfd"]
-size = Vector2(16, 15.5)
+size = Vector2(16, 16.75)
 
 [node name="Cloud Forest Falling Ground" type="CharacterBody2D"]
 script = ExtResource("1_1q070")
@@ -105,6 +103,6 @@ libraries = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
-position = Vector2(-8, -32)
+position = Vector2(-8, -32.625)
 shape = SubResource("RectangleShape2D_y3rfd")
 script = ExtResource("3_yx7cm")

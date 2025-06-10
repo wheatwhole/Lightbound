@@ -25,7 +25,7 @@ texture = ExtResource("2_k18xk")
 region_rect = Rect2(100, 100, 100, 100)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Layer1"]
-position = Vector2(311.5, -443.85)
+position = Vector2(308, -444)
 scale = Vector2(28.2188, 36.2594)
 texture = ExtResource("3_kvh2u")
 
@@ -36,7 +36,7 @@ texture = ExtResource("4_m6pq3")
 
 [node name="Layer2" type="ParallaxLayer" parent="."]
 texture_filter = 1
-position = Vector2(143, 0)
+position = Vector2(139, 0)
 motion_mirroring = Vector2(903, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Layer2"]
@@ -52,7 +52,7 @@ scale = Vector2(1.00893, 0.930693)
 texture = ExtResource("5_rkx83")
 
 [node name="Layer3" parent="." instance=ExtResource("6_kv2bt")]
-position = Vector2(143, 0)
+position = Vector2(146, 0)
 motion_mirroring = Vector2(903, 0)
 
 [node name="Layer4" parent="." instance=ExtResource("7_wpbsq")]

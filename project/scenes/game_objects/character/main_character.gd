@@ -33,7 +33,7 @@ func handle_animation ():
 	if velocity.y > 100:
 		animation_player.play("fall")
 	
-func _physics_process(_delta):	
+func _process(_delta):	
 	if not is_on_floor():
 		# velocity.x=lerp(prevVelocity.x, velocity.x, 0)
 		velocity.y += gravity*gravity_multiplier
@@ -42,9 +42,8 @@ func _physics_process(_delta):
 		else:
 			gravity = 4900
 		
-	if  Input.is_action_just_pressed("jump") and is_on_floor () or Input.is_action_just_pressed("jump") and coyote_timer.time_left> 0.0:
+	if  Input.is_action_just_pressed("jump") and is_on_floor () or Input.is_action_just_pressed("jump") and coyote_timer.time_left > 0.0:
 		velocity.y = JUMP_VELOCITY
-		
 	if Input.is_action_just_released("jump"):
 		velocity.y *= 0.45
 	

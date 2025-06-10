@@ -12,4 +12,4 @@ func _process(_delta):
 
 func _on_body_entered(body):
 	if body.name == "CharacterBody2D":
-		get_tree().reload_current_scene()
+		get_tree().call_deferred("reload_current_scene")

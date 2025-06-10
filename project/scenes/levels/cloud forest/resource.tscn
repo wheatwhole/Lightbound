@@ -1,14 +1,5 @@
-[gd_scene load_steps=2 format=3 uid="uid://j3op7e8ngvm1"]
+[gd_scene load_steps=2 format=3 uid="uid://b05vdi5s0clbb"]
 
 [ext_resource type="PackedScene" uid="uid://pjmysjmcboyq" path="res://ldtk/cloud_forest_level.ldtk" id="1_eh1i0"]
 
 [node name="cloud_forest_level" instance=ExtResource("1_eh1i0")]
-
-[node name="Level_0-tilemap-16x16" parent="Level_0" index="0"]
-layer_0/name = "Tiles"
-layer_0/tile_data = PackedInt32Array(393283, 851969, 7, 589835, 2818049, 14, 82, 1, 0, 65619, 1, 0, 65620, 1, 0, 65621, 1, 0, 65622, 1, 0, 65623, 1, 0, 393284, 851969, 7, 393285, 851969, 7, 393286, 917505, 7, 458809, 786433, 7, 458810, 917505, 7, 458829, 1, 0, 524365, 1, 0, 589902, 1, 0, 589907, 1, 0, 655419, 1179649, 4, 655438, 1, 0, 655370, 2818049, 14)
-layer_1/name = "Terrain-int-values"
-
-[node name="Level_1-tilemap-16x16" parent="Level_1" index="0"]
-layer_0/name = "Tiles"
-layer_0/tile_data = PackedInt32Array(393240, 786433, 7, 393241, 917505, 7, 786434, 851969, 7, 1245193, 2818049, 14, 1245194, 2818049, 14, 1245195, 2818049, 14, 1245199, 851969, 7, 786444, 2818049, 14, 786445, 2818049, 14, 1245200, 851969, 7, 720908, 2818049, 13, 720909, 2818049, 13, 786435, 851969, 7, 786436, 851969, 7, 786437, 917505, 7, 1179657, 2818049, 13, 1179658, 2818049, 13, 1179659, 2818049, 13, 1245201, 917505, 7)
