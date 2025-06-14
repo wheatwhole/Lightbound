@@ -162,7 +162,7 @@ func handle_landing():
 
 		
 func get_input_axis():
-	
+	# hi
 	axis = Vector2.ZERO
 	axis.x = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
 	axis.y = int(Input.is_action_pressed("down")) - int(Input.is_action_pressed("jump"))
