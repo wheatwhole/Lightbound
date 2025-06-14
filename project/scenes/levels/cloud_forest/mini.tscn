@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmyx3jnb1h51i"]
+[gd_scene load_steps=3 format=3 uid="uid://bdut6ve1p8gq0"]
 
 [ext_resource type="PackedScene" uid="uid://i7dtuae52map" path="res://ldtk/cloud_forest_mini.ldtk" id="1_8whnq"]
 [ext_resource type="TileSet" uid="uid://bq5uigxddm5oq" path="res://ldtk/cloud_forest_mini/tilesets/cloud_forest_mini-tileset-16x16.res" id="2_dcwhd"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dypo8ohtv4hie" path="res://scenes/island_select/island_select.gd" id="1_x2ksv"]
 [ext_resource type="PackedScene" uid="uid://cvn16758rhxea" path="res://scenes/levels/cloud_forest/level.tscn" id="3_h05ho"]
-[ext_resource type="PackedScene" uid="uid://dmyx3jnb1h51i" path="res://scenes/levels/cloud_forest/mini.tscn" id="5_pxyvd"]
+[ext_resource type="PackedScene" uid="uid://bdut6ve1p8gq0" path="res://scenes/levels/cloud_forest/mini.tscn" id="5_pxyvd"]
 [ext_resource type="PackedScene" uid="uid://dip3ohgw5r4gr" path="res://ui/back/back.tscn" id="5_vwpgq"]
 [ext_resource type="PackedScene" uid="uid://dqt4r2upcl5xa" path="res://scenes/island_select/plricon.tscn" id="22_eh2vo"]
 [ext_resource type="PackedScene" uid="uid://4iyll8cohv4j" path="res://scenes/island_select/island_icon.tscn" id="23_f64jf"]
