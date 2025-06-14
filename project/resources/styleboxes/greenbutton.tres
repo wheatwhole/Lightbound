@@ -1,8 +1,0 @@
-[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://ea8o34rut006"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pfbs8"]
-load_path = "res://.godot/imported/Green Button (guide).png-934c9f7a9a669526ced987d38df8bf6b.ctex"
-
-[resource]
-texture = SubResource("CompressedTexture2D_pfbs8")
-region_rect = Rect2(0, 0, 62, 62)

@@ -6,6 +6,7 @@ var islands: Array
 var islands_formatted: Array
 var current_island: String
 var falling_ground_anims: Dictionary
+var DEFAULT_GRAVITY = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	reloadfixstatus = 0

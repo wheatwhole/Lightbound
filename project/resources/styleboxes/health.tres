@@ -1,9 +1,0 @@
-[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cufon377c8fin"]
-
-[ext_resource type="Texture2D" uid="uid://2ngwgrlytxmn" path="res://assets/game_elements/Heart&ManaUi.png" id="1_e7gps"]
-
-[resource]
-texture = ExtResource("1_e7gps")
-axis_stretch_horizontal = 2
-axis_stretch_vertical = 2
-region_rect = Rect2(20, 12, 12, 11)

@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bj3pfejogia13"]
+
+[ext_resource type="FontFile" uid="uid://h3wek4alh348" path="res://assets/ui/humblefonts/matchup-pro-v1.1/MatchupPro.otf" id="1_afevf"]
+
+[resource]
+Label/colors/font_shadow_color = Color(0.192157, 0.223529, 0.298039, 1)
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 2
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("1_afevf")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 12
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 5
