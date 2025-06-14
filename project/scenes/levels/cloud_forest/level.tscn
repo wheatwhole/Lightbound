@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://76ir1hc3tq2l" path="res://entities/falling_ground/falling_ground.tscn" id="2_1vjxr"]
 [ext_resource type="PackedScene" uid="uid://ccvn4owdcsele" path="res://common/Level Manager/level_manager.tscn" id="2_5na3x"]
 [ext_resource type="TileSet" uid="uid://dif3tymrofpnt" path="res://scenes/levels/tilesets/cloud_forest.tres" id="3_nf7sc"]
-[ext_resource type="PackedScene" uid="uid://c5j8l1lh01841" path="res://entities/player/main_character.tscn" id="4_tgxm3"]
+[ext_resource type="PackedScene" uid="uid://bfucj5sfnkp71" path="res://entities/player/main_character.tscn" id="4_tgxm3"]
 [ext_resource type="PackedScene" uid="uid://b2xcj0wgmnf5b" path="res://scenes/game_objects/fall_area.tscn" id="7_rxmal"]
 [ext_resource type="PackedScene" uid="uid://w173w73pjist" path="res://ui/hud/level_ui.tscn" id="8_r0ii5"]
 [ext_resource type="PackedScene" uid="uid://5wo4ahrx2602" path="res://scenes/background/background.tscn" id="9_4aalx"]

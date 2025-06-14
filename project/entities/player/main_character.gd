@@ -25,7 +25,7 @@ var jumps: int = 0
 const DASH_SPEED: int = 500 # speed of the dash
 const END_DASH_SPEED: int = 330 # speed the player moves after the dash; momentum
 
-const DASH_DURATION: float = 0.25 # time in seconds for dash to last
+const DASH_DURATION: float = 0.2 # time in seconds for dash to last
 const DASH_PAUSE_DURATION: float = 0.25
 var dash_time = 0
 var dash_pause_time = 0
@@ -97,10 +97,9 @@ func _process(delta: float) -> void:
 		else:
 			gravity = Global.DEFAULT_GRAVITY
 			
-	if !is_dashing:
-		velocity.y += gravity * delta
+	velocity.y += gravity * delta
 		
-	if is_on_floor() && velocity.y > 0:
+	if is_on_floor() and velocity.y > 0:
 		has_dashed = false
 		
 	if !player == null and Input.is_action_just_released("jump"):
