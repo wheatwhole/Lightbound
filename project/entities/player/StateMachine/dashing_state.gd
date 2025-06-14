@@ -1,6 +1,5 @@
 extends PlayerState
 
-
 func enter_state(player_node):
 	super(player_node)
 	var dirx = Input.get_axis("left", "right");

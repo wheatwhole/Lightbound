@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=4 uid="uid://cvn16758rhxea"]
 
-[ext_resource type="Script" path="res://scenes/levels/cloud forest/level.gd" id="1_ir7x7"]
+[ext_resource type="Script" path="res://scenes/levels/cloud_forest/level.gd" id="1_7as4i"]
 [ext_resource type="PackedScene" uid="uid://76ir1hc3tq2l" path="res://entities/falling_ground/falling_ground.tscn" id="2_1vjxr"]
 [ext_resource type="PackedScene" uid="uid://ccvn4owdcsele" path="res://common/Level Manager/level_manager.tscn" id="2_5na3x"]
 [ext_resource type="TileSet" uid="uid://dif3tymrofpnt" path="res://scenes/levels/tilesets/cloud_forest.tres" id="3_nf7sc"]
@@ -14,7 +14,7 @@
 size = Vector2(476.5, 1283.75)
 
 [node name="level1" type="Node"]
-script = ExtResource("1_ir7x7")
+script = ExtResource("1_7as4i")
 
 [node name="Level Manager" parent="." instance=ExtResource("2_5na3x")]
 

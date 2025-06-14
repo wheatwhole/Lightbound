@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://duk6xqmcinbi7"]
 
 [ext_resource type="Script" uid="uid://dypo8ohtv4hie" path="res://scenes/island_select/island_select.gd" id="1_x2ksv"]
-[ext_resource type="PackedScene" uid="uid://cvn16758rhxea" path="res://scenes/levels/cloud_forest/level.tscn" id="3_h05ho"]
+[ext_resource type="PackedScene" uid="uid://cvn16758rhxea" path="res://scenes/levels/cloud_forest/level.tscn" id="3_wsqo0"]
 [ext_resource type="PackedScene" uid="uid://bdut6ve1p8gq0" path="res://scenes/levels/cloud_forest/mini.tscn" id="5_pxyvd"]
 [ext_resource type="PackedScene" uid="uid://dip3ohgw5r4gr" path="res://ui/back/back.tscn" id="5_vwpgq"]
 [ext_resource type="PackedScene" uid="uid://dqt4r2upcl5xa" path="res://scenes/island_select/plricon.tscn" id="22_eh2vo"]
@@ -41,7 +41,7 @@ offset_bottom = 180.0
 scale = Vector2(0.974284, 1)
 next_island_left = NodePath("../Shattered Savanna")
 next_island_right = NodePath("../Shattered Savanna")
-level_scene_packed = ExtResource("3_h05ho")
+level_scene_packed = ExtResource("3_wsqo0")
 
 [node name="Shattered Savanna" parent="Scene Objects" node_paths=PackedStringArray("next_island_left", "next_island_right") instance=ExtResource("23_f64jf")]
 offset_left = 686.0

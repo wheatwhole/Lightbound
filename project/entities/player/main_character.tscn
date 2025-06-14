@@ -1,6 +1,6 @@
 [gd_scene load_steps=41 format=3 uid="uid://bfucj5sfnkp71"]
 
-[ext_resource type="Script" uid="uid://3o4sptragl7n" path="res://entities/player/main_character.gd" id="1_reheq"]
+[ext_resource type="Script" uid="uid://cf0jdjwtlhpk1" path="res://entities/player/main_character.gd" id="1_4i0p0"]
 [ext_resource type="Texture2D" uid="uid://dcj7eql2lrjg7" path="res://assets/character/Idle_(32 x 32).png" id="3_2auch"]
 [ext_resource type="Texture2D" uid="uid://c5qa3s22t50ec" path="res://assets/character/Falling_(32 x 32).png" id="3_hgruf"]
 [ext_resource type="Texture2D" uid="uid://bov53pyenr385" path="res://assets/character/Jumping_(32 x 32).png" id="4_2auch"]
@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://entities/player/StateMachine/land_state.gd" id="11_054ll"]
 [ext_resource type="Script" uid="uid://f6567kfrthm0" path="res://entities/player/StateMachine/running_state.gd" id="12_ouwug"]
 [ext_resource type="Script" uid="uid://d2hbmhdxwk1si" path="res://entities/player/StateMachine/dashing_state.gd" id="13_y20ix"]
-[ext_resource type="Script" uid="uid://c21dc3haer464" path="res://entities/player/StateMachine/dash_end_state.gd" id="14_4i0p0"]
+[ext_resource type="Script" uid="uid://g3skrcpir8ko" path="res://entities/player/StateMachine/dash_end_state.gd" id="14_4i0p0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6we64"]
 atlas = ExtResource("3_2auch")
@@ -280,7 +280,7 @@ _data = {
 
 [node name="player" type="CharacterBody2D"]
 texture_filter = 1
-script = ExtResource("1_reheq")
+script = ExtResource("1_4i0p0")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
