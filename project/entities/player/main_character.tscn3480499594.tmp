@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bov53pyenr385" path="res://assets/character/Jumping_(32 x 32).png" id="4_2auch"]
 [ext_resource type="Texture2D" uid="uid://dfej0wfuldjqy" path="res://assets/character/Running_(32 x 32).png" id="5_6we64"]
 [ext_resource type="Texture2D" uid="uid://d2drvte4w0m41" path="res://assets/character/Ground_Recovery_(32 x 32).png" id="5_nsneq"]
-[ext_resource type="Script" uid="uid://b824wgi8x61yt" path="res://entities/player/just_dashed_timer.gd" id="6_2auch"]
+[ext_resource type="Script" path="res://entities/player/dash_timer.gd" id="6_2auch"]
 [ext_resource type="Script" uid="uid://hg5p1a5lqgf4" path="res://entities/player/StateMachine/idle_state.gd" id="8_vs4ir"]
 [ext_resource type="Script" uid="uid://cs37tiqbuy071" path="res://entities/player/StateMachine/falling_state.gd" id="9_y20ix"]
 [ext_resource type="Script" uid="uid://berfsi7j0k76u" path="res://entities/player/StateMachine/jumping_state.gd" id="10_445nj"]
@@ -333,8 +333,8 @@ libraries = {
 &"": SubResource("AnimationLibrary_e8bj6")
 }
 
-[node name="JustDashedTimer" type="Timer" parent="."]
-wait_time = 0.2
+[node name="DashTimer" type="Timer" parent="."]
+wait_time = 0.25
 one_shot = true
 script = ExtResource("6_2auch")
 
@@ -359,9 +359,5 @@ script = ExtResource("13_y20ix")
 [node name="DashEndState" type="Node" parent="."]
 script = ExtResource("14_4i0p0")
 
-[node name="JumpBufferingTimer" type="Timer" parent="."]
-wait_time = 0.15
-one_shot = true
-
 [connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
-[connection signal="timeout" from="JustDashedTimer" to="." method="_on_just_dashed_timer_timeout"]
+[connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]

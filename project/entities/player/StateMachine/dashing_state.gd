@@ -1,29 +1,21 @@
 extends PlayerState
 
 func enter_state(player_node):
+
 	super(player_node)
-	var dirx = Input.get_axis("left", "right");
-	var diry = Input.get_axis("down", "jump");
-	
+	var dash_direction = player.previous_axis
+	dash_direction == player.previous_axis
+	print("start dash")
+	player.is_dashing = true
+	if player.dashes > 0:
+		
+		player.dashes -= 1	
+		player.velocity = dash_direction * player.DASH_SPEED
+		
+		print("DASH_SPEED BEGIN: ", player.velocity)
+
 func handle_input(delta):
-	var axis = player.axis
-	if !player.has_dashed:
 
-			
-		# player.velocity = player.velocity.move_toward(axis.normalized() * player.DASH_SPEED, player.ACCELERATION * player.FRICTION)
-		if abs(axis.y) > 0 and abs(axis.x) > 0:
-			player.velocity = axis * player.DASH_SPEED * 1.4
-		else:
-			player.velocity = axis * player.DASH_SPEED
-		player.is_dashing = true
-		player.has_dashed = true
-
-	if player.is_dashing:    
-		player.velocity.y = move_toward(player.velocity.y, 0, 500 * delta)
-		player.velocity.x = move_toward(player.velocity.x, 0 , 500 * delta)
-
-		player.dash_time += delta
-		if player.dash_time >= player.DASH_DURATION:
-			player.dash_time = 0	
-			player.change_state("DashEndState")
+	print("DASH SPEED CURRENT: ", player.velocity)
 	
+	player.change_state("DashEndState")	

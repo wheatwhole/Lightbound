@@ -103,8 +103,9 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color(0.940003, 0.888909, 1, 1)
+self_modulate = Color(0.278431, 1, 1, 1)
 texture_filter = 1
 position = Vector2(-8, -32)
 shape = SubResource("RectangleShape2D_y3rfd")
-debug_color = Color(0.589047, 0.529375, 1, 0.42)
 script = ExtResource("3_jupfm")
