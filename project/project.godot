@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="The Second Coming"
+config/name="Lightbound"
 run/main_scene="res://ui/title/main_menu.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 

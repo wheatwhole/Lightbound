@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://wcmqt36k3nwf"]
+
+[ext_resource type="Script" uid="uid://barrf4glv8lta" path="res://entities/player/dash_distortion/dash_distortion.gd" id="1_tjojq"]
+[ext_resource type="Shader" uid="uid://11kyst27hhk" path="res://entities/player/dash_distortion/dash_distortion.gdshader" id="2_5dwre"]
+
+[sub_resource type="Animation" id="Animation_tjojq"]
+resource_name = "Distort"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dash Distortion/ColorRect:material:shader_parameter/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1.06464, 1.03526),
+"update": 0,
+"values": [0.5, 1.93]
+}
+
+[sub_resource type="Animation" id="Animation_jnl5d"]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dash Distortion/ColorRect:material:shader_parameter/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.25]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ln54d"]
+_data = {
+&"Distort": SubResource("Animation_tjojq"),
+&"RESET": SubResource("Animation_jnl5d")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tjojq"]
+shader = ExtResource("2_5dwre")
+shader_parameter/strength = 0.08
+shader_parameter/radius = 0.25
+shader_parameter/aberration = 0.0
+shader_parameter/width = 0.04
+shader_parameter/feather = 0.4
+
+[node name="Dash Distortion" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 175.0
+offset_bottom = 175.0
+script = ExtResource("1_tjojq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_ln54d")
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 7
+material = SubResource("ShaderMaterial_tjojq")
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 24.0
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

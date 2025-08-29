@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bfucj5sfnkp71"]
+[gd_scene load_steps=41 format=3 uid="uid://bfucj5sfnkp71"]
 
 [ext_resource type="Script" uid="uid://3o4sptragl7n" path="res://entities/player/main_character.gd" id="1_4i0p0"]
 [ext_resource type="Texture2D" uid="uid://dcj7eql2lrjg7" path="res://assets/character/Idle_(32 x 32).png" id="3_2auch"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bov53pyenr385" path="res://assets/character/Jumping_(32 x 32).png" id="4_2auch"]
 [ext_resource type="Texture2D" uid="uid://dfej0wfuldjqy" path="res://assets/character/Running_(32 x 32).png" id="5_6we64"]
 [ext_resource type="Texture2D" uid="uid://d2drvte4w0m41" path="res://assets/character/Ground_Recovery_(32 x 32).png" id="5_nsneq"]
-[ext_resource type="PackedScene" uid="uid://wcmqt36k3nwf" path="res://entities/player/dash_distortion/dash_distortion.tscn" id="7_4i0p0"]
+[ext_resource type="Script" uid="uid://b824wgi8x61yt" path="res://entities/player/just_dashed_timer.gd" id="6_2auch"]
 [ext_resource type="Script" uid="uid://hg5p1a5lqgf4" path="res://entities/player/StateMachine/idle_state.gd" id="8_vs4ir"]
 [ext_resource type="Script" uid="uid://cs37tiqbuy071" path="res://entities/player/StateMachine/falling_state.gd" id="9_y20ix"]
 [ext_resource type="Script" uid="uid://berfsi7j0k76u" path="res://entities/player/StateMachine/jumping_state.gd" id="10_445nj"]
@@ -278,17 +278,9 @@ _data = {
 &"run": SubResource("Animation_c0qhj")
 }
 
-[sub_resource type="GDScript" id="GDScript_n6ba3"]
-script/source = "extends Timer
-
-var parent = get_parent()
-"
-
 [node name="player" type="CharacterBody2D"]
 texture_filter = 1
 script = ExtResource("1_4i0p0")
-
-[node name="Dash Distortion Layer" parent="." instance=ExtResource("7_4i0p0")]
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -340,7 +332,7 @@ libraries = {
 [node name="JustDashedTimer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
-script = SubResource("GDScript_n6ba3")
+script = ExtResource("6_2auch")
 
 [node name="IdleState" type="Node" parent="."]
 script = ExtResource("8_vs4ir")
@@ -376,10 +368,9 @@ wait_time = 0.15
 one_shot = true
 
 [node name="DashTimer" type="Timer" parent="Timers"]
-one_shot = true
 
 [node name="DashBuffer" type="Timer" parent="Timers"]
 
 [connection signal="timeout" from="JustDashedTimer" to="." method="_on_just_dashed_timer_timeout"]
 [connection signal="timeout" from="Timers/CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
-[connection signal="timeout" from="Timers/DashTimer" to="RunningState" method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="Timers/DashTimer" to="." method="_on_dash_timer_timeout"]
