@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
 # jumping
-const JUMP_VELOCITY: float = 350.0 # negative because setting to positive just doesnt work. Probably because y in godot is negative
+const JUMP_VELOCITY: float = 350.0
+var can_jump: bool = true
+ # negative because setting to positive just doesnt work. Probably because y in godot is negative
 # acceleration and friction
 const ACCELERATION: float = 20
 const FRICTION: float = 100
@@ -17,6 +19,7 @@ var can_dash: bool = true
 var dash_time = 0.25
 var is_dashing = false
 var dash_direction = Vector2.RIGHT
+var wavedash_speed = 500
 
 
 
@@ -37,12 +40,6 @@ var dash_distortion
 var last_floor = false  
 var airtime: float = 0.0
 var jumps_used: int = 0
-
-# dashing
-
-# wavedashing
-var wavedash_speed = 500
-
 
 var current_state # state machine
 var axis 
@@ -68,7 +65,7 @@ func _process(delta: float) -> void:
 	gravity = Global.DEFAULT_GRAVITY
 
 	if not is_on_floor():
-		if abs(velocity.y) < 1:
+		if abs(velocity.y) < 1: 
 			gravity *= 0.95
 		else:
 			gravity = Global.DEFAULT_GRAVITY
@@ -93,9 +90,20 @@ func _process(delta: float) -> void:
 		dashes = 0
 		player.can_dash = true
 	
+	if jumps_used < 1 and airtime < 0.15:
+		player.can_jump = true
+	elif jumps_used < 1 and airtime < 0.15 and jump_buffer.time_left > 0:
+		player.can_jump = false
+	else:
+		player.can_jump = false
 	# commit movement
+	
+
+	
+	
 	move_and_slide()
-		
+	
+
 func change_state(new_state_name: String):
 	print("changing state to ", new_state_name)
 	if current_state:
@@ -114,30 +122,3 @@ func get_input_axis() -> Vector2:
 		previous_axis = axis
 
 	return axis
-
-# Dashing
-
-				
-
-func _on_dash_timer_timeout() -> void:
-	dashes += 1
-	change_state("DashingState")
-
-#func GetDashDirection() -> Vector2:
-	#var _dir = Vector2.ZERO
-	#get_input_axis()
-	#_dir = previous_axis
-	#return _dir
-	
-#func UpdateSquish():
-	#pass
-	#Sprite2D.scale.x = squishX
-	#Sprite2D.scale.y = squishY
-	#
-	#if squishX != 0: squishX = move_toward(squishX, 1.0, squishStep)
-	#if squishY != 0: squishY = move_toward(squishY, 1.0, squishStep)
-
-#func SetSquish(_squishX: float = 1.0, _squishY: float = 1.0, _step: float = squishStep):
-	#squishX = _squishX if (_squishX != 0) else 1.0
-	#squishY = _squishY if (_squishY != 0) else 1.0
-	#squishStep = _step if (_step != 0) else squishStep

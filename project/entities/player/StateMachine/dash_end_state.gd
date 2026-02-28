@@ -18,5 +18,5 @@ func handle_input(delta):
 		if player.axis.x != 0 and dash_end_timer <= 0:
 			player.change_state("RunningState")
 	
-	if player.is_on_floor() and player.jump_buffer.time_left > 0:
+	if Input.is_action_just_pressed("jump") and player.can_jump:
 		player.change_state("JumpingState")

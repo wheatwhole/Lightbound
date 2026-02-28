@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dif3tymrofpnt"]
+[gd_resource type="TileSet" format=3 uid="uid://dif3tymrofpnt"]
 
 [ext_resource type="Texture2D" uid="uid://dr2apjjhpmwgw" path="res://assets/terrain/Season_collection.png" id="1_tschg"]
 
