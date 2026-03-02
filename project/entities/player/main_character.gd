@@ -5,8 +5,10 @@ const JUMP_VELOCITY: float = 350.0
 var can_jump: bool = true
  # negative because setting to positive just doesnt work. Probably because y in godot is negative
 # acceleration and friction
-const ACCELERATION: float = 20
+const BASE_RUN_SPEED: float = 200
+var run_speed: float = BASE_RUN_SPEED
 const FRICTION: float = 100
+const ACCELERATION: float = 20
 var momentum_grace_timer = 0.0
 const MOMENTUM_GRACE_DURATION = 0.2
 
@@ -24,8 +26,6 @@ var wavedash_speed = 500
 
 
 var gravity: float = 0
-var base_run_speed: float = 200
-var run_speed: float = base_run_speed
 var gravity_enabled = true
 var friction_enabled = true
 
@@ -59,9 +59,8 @@ func _process(delta: float) -> void:
 	
 	momentum_grace_timer = max(momentum_grace_timer - delta, 0)
 
-	if Input.is_action_just_pressed("jump"):
-		jump_buffer.start()
-	
+
+	# gravity
 	gravity = Global.DEFAULT_GRAVITY
 
 	if not is_on_floor():
@@ -72,7 +71,12 @@ func _process(delta: float) -> void:
 
 	if gravity_enabled == true:
 		velocity.y += gravity * delta
-		
+	# friction
+	if not player.is_dashing:
+		var velocity_weight: float = delta * (ACCELERATION if axis.x else FRICTION)
+		velocity.x = lerp(velocity.x, axis.x * run_speed, velocity_weight)
+			
+	# shift the player if they hit a ledge
 	if !player == null and Input.is_action_just_released("jump"):
 		if $RightOuter.is_colliding() and !$RightInner.is_colliding() \
 			and !$LeftInner.is_colliding() and !$LeftOuter.is_colliding():
@@ -81,8 +85,11 @@ func _process(delta: float) -> void:
 		elif $LeftOuter.is_colliding() and !$RightInner.is_colliding() \
 			and !$LeftInner.is_colliding() and !$RightOuter.is_colliding():
 				player.global_position.x -= 7
-
-	# jump buffering and dash reset
+	
+	# jumping
+	if Input.is_action_just_pressed("jump"):
+		jump_buffer.start()
+	
 	airtime += delta
 	if is_on_floor():
 		airtime = 0.0
@@ -96,7 +103,6 @@ func _process(delta: float) -> void:
 		player.can_jump = false
 	else:
 		player.can_jump = false
-	# commit movement
 	
 
 	
@@ -115,8 +121,8 @@ func change_state(new_state_name: String):
 		
 func get_input_axis() -> Vector2:
 	axis = Vector2.ZERO
-	axis.x = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
-	axis.y = int(Input.is_action_pressed("down")) - int(Input.is_action_pressed("jump"))
+	axis.x = Input.get_action_strength("right") - Input.get_action_strength("left")
+	axis.y = Input.get_action_strength("down") - Input.get_action_strength("jump")
 
 	if axis.x != 0 or axis.y != 0:
 		previous_axis = axis

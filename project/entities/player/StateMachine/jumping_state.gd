@@ -1,4 +1,4 @@
-#IdleState
+# Jumping State
 extends PlayerState
 
 # reference to player node controlling the state
@@ -13,9 +13,6 @@ func enter_state(player_node):
 		player.velocity.y = -player.JUMP_VELOCITY # conservation of momentum
 	else:
 		player.velocity.y = -player.JUMP_VELOCITY
-	
-	if abs(player.velocity.x) > 350 and abs(player.velocity.y) > 350:
-		player.velocity.x += player.dash_direction * 1000
 			
 func handle_input(delta):
 	
