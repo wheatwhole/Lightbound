@@ -286,6 +286,7 @@ var parent = get_parent()
 
 [node name="player" type="CharacterBody2D" unique_id=1376494582]
 texture_filter = 1
+slide_on_ceiling = false
 script = ExtResource("1_4i0p0")
 
 [node name="Dash Distortion Layer" parent="." unique_id=33436171 instance=ExtResource("7_4i0p0")]

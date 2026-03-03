@@ -14,7 +14,7 @@ const MOMENTUM_GRACE_DURATION = 0.2
 
 # dashing
 const MAX_DASHES = 1
-const DASH_SPEED = 350 
+const DASH_SPEED = 450 
 const DASH_DURATION = 0.1
 var dashes = 0
 var can_dash: bool = true
