@@ -1,4 +1,5 @@
 extends PlayerState
+# i QUIT :)
 
 var dash_distortion = preload("res://entities/player/dash_distortion/dash_distortion.tscn")
 
